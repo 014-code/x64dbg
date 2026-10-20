@@ -5,6 +5,8 @@
 
 CallStackView::CallStackView(StdTable* parent) : StdIconTable(parent)
 {
+    enableMultiSelection(true);
+
     mHighlightMode = HighlightNone;
     mHighlightKey.clear();
 

@@ -17,6 +17,7 @@ HandlesView::HandlesView(QWidget* parent) : QWidget(parent)
 {
     // Setup handles list
     mHandlesTable = new StdSearchListView(this, true, true);
+    mHandlesTable->enableMultiSelection(true);
     mHandlesTable->setInternalTitle("Handles");
     mHandlesTable->mSearchStartCol = 0;
     mHandlesTable->setDrawDebugOnly(true);
@@ -34,6 +35,7 @@ HandlesView::HandlesView(QWidget* parent) : QWidget(parent)
 
     // Setup windows list
     mWindowsTable = new StdIconSearchListView(this, true, true);
+    mWindowsTable->enableMultiSelection(true);
     mWindowsTable->setInternalTitle("Windows");
     mWindowsTable->setSearchStartCol(0);
     mWindowsTable->setDrawDebugOnly(true);
@@ -53,6 +55,7 @@ HandlesView::HandlesView(QWidget* parent) : QWidget(parent)
 
     // Setup tcp list
     mTcpConnectionsTable = new StdSearchListView(this, true, true);
+    mTcpConnectionsTable->enableMultiSelection(true);
     mTcpConnectionsTable->setInternalTitle("TcpConnections");
     mTcpConnectionsTable->setSearchStartCol(0);
     mTcpConnectionsTable->setDrawDebugOnly(true);
@@ -73,6 +76,7 @@ HandlesView::HandlesView(QWidget* parent) : QWidget(parent)
     */
 
     mPrivilegesTable = new StdTable(this);
+    mPrivilegesTable->enableMultiSelection(true);
     mPrivilegesTable->setWindowTitle("Privileges");
     mPrivilegesTable->setDrawDebugOnly(true);
     mPrivilegesTable->setContextMenuPolicy(Qt::CustomContextMenu);
